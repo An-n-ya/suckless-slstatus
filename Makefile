@@ -41,7 +41,7 @@ config.h:
 	cp config.def.h $@
 
 slstatus: slstatus.o $(COM:=.o) $(REQ:=.o)
-	$(CC) -o $@ $(LDFLAGS) $(COM:=.o) $(REQ:=.o) slstatus.o $(LDLIBS)
+	$(CC) -o $@ $(COM:=.o) $(REQ:=.o) slstatus.o $(LDLIBS) $(LDFLAGS) 
 
 clean:
 	rm -f slstatus slstatus.o $(COM:=.o) $(REQ:=.o)
